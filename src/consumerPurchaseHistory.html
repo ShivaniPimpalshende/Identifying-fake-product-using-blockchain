@@ -1,0 +1,156 @@
+<!doctype html>
+<html lang="en">
+  <head>
+  	<title>Fake Product Identification</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+	<link href='https://fonts.googleapis.com/css?family=Roboto:400,100,300,700' rel='stylesheet' type='text/css'>
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+	<link rel="stylesheet" href="css/style.css">
+	<style>
+	
+		/* Add the translucent background for better readability */
+		.form-section {
+		  background-color: rgba(255, 255, 255, 0.8); /* White background with 80% opacity */
+		  padding: 20px;
+		  border-radius: 10px;
+		  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3); /* Slight shadow to make it stand out */
+		  max-width: 900px; /* Set a max width */
+		  margin: 0 auto; /* Center the form */
+		}
+  
+		/* Style the input fields and button */
+		input, select, button {
+		  background-color: white;
+		  color: black;
+		  border: 2px solid #000; /* Solid border for visibility */
+		  padding: 10px;
+		  border-radius: 5px;
+		  width: 100%; /* Make input fields take up full width */
+		  margin-bottom: 10px;
+		}
+  
+		.btn-small {
+			background-color: #ff9900; /* Bright color for buttons */
+			color: black;
+			border: none;
+			cursor: pointer;
+			padding: 5px 10px; /* Adjusted padding to make the button smaller */
+			font-size: 16px; /* Smaller font size */
+			width: auto; /* Override full width if applied elsewhere */
+			display: inline-block;
+			border-radius: 5px;
+		  }
+		  
+		  .btn-small:hover {
+			background-color: #cc7a00; /* Darken button on hover */
+		  }
+		  
+  
+		/* Adjust body styling */
+		body {
+		  font-family: 'Roboto', sans-serif;
+		  background: url('https://c8.alamy.com/comp/P20BDN/abstract-futuristic-blockchain-light-blue-background-vector-design-digital-network-technology-concept-texture-P20BDN.jpg') no-repeat center center fixed;
+		  background-size: cover;
+		  height: 100vh;
+		  margin: 0;
+		}
+  
+		.navbar {
+		  background-color: rgba(0, 0, 0, 0.6); /* Semi-transparent navbar */
+		}
+	  
+  </style>
+	</head>
+	<!-- <body style="font-family: 'Roboto', sans-serif; background: url('https://c8.alamy.com/comp/P20BDN/abstract-futuristic-blockchain-light-blue-background-vector-design-digital-network-technology-concept-texture-P20BDN.jpg') no-repeat center center fixed; background-size: cover; height: 100vh; margin: 0; background-color:transparent !important">
+		<div style="position: absolute; top: 0; left: 0; right: 0; bottom: 0; background-color: rgba(0, 0, 0, 0); z-index: 1;"></div> -->
+ <body>
+	<section class="ftco-section" style="padding: 4rem 0;">
+		<div class="container-fluid px-md-5">
+			<div class="row justify-content-between">
+				<div class="col-md-8 order-md-last">
+					<div class="row">
+						<div class="col-md-6 text-center">
+							<a class="navbar-brand" href="index.html"  style="color: darkblue;">Fake Product Identification <span>through Blockchain</span></a>
+						</div>
+						<div class="col-md-6 d-md-flex justify-content-end mb-md-0 mb-3">
+							<form action="#" class="searchform order-lg-last">
+			          
+			        </form>
+						</div>
+					</div>
+				</div>
+				<div class="col-md-4 d-flex">
+					<div class="social-media">
+		    		
+	        </div>
+				</div>
+			</div>
+		</div>
+		<nav class="navbar navbar-expand-lg navbar-dark ftco_navbar bg-dark ftco-navbar-light" id="ftco-navbar" style="background-color: purple;">
+	    <div class="container-fluid">
+	    
+	      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#ftco-nav" aria-controls="ftco-nav" aria-expanded="false" aria-label="Toggle navigation">
+	        <span class="fa fa-bars"></span> Menu
+	      </button>
+	      <div class="collapse navbar-collapse" id="ftco-nav" style="background-color: rgb(21, 27, 86);">
+	        <ul class="navbar-nav m-auto">
+	        	<li class="nav-item"><a href="index.html" class="nav-link">Home</a></li>
+			  	<li class="nav-item "><a href="manufacturer.html" class="nav-link">Manufacturer</a></li>
+	        	<li class="nav-item"><a href="seller.html" class="nav-link">Seller</a></li>
+	          	<li class="nav-item"><a href="consumer.html" class="nav-link">Consumer</a></li>
+	        </ul>
+	      </div>
+	    </div>
+	  </nav>
+    <!-- END nav -->
+	
+	<section>
+        <div class="container">
+            <h2>Consumer Product History</h2>
+       
+              <div class="form-group">
+                <label for="consumerCode">Consumer Code</label>
+                <input type="text" class="form-control" id="consumerCode" placeholder="Enter Consumer Code" name="consumerCode">
+              </div>
+              
+              <button type="submit" class="btn btn-small btn-register" id="register">Get Products</button>
+          </div>
+    </section>
+
+
+	</section>
+    <section>
+        <div class="container">
+            <h2>Products purchased by consumer</h2>
+            <table class="table">
+                <thead>
+                    <tr>
+                        <th>Product SN</th>
+                        <th>Seller Code</th>
+                        <th>Manufacturer Code</th>
+                    </tr>
+                </thead>
+                <tbody id="logdata">
+
+                </tbody>
+            </table>
+            <center><p>Your address is <b id="add"></b></p></center>
+        </div>
+    </section>
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+  <script src="js/popper.js"></script>
+  <script src="js/bootstrap.min.js"></script>
+  <script src="js/main.js"></script>
+  <script src="js/web3.min.js"></script>
+  <script src="js/truffle-contract.js"></script>
+  <script src="js/consumerPurchaseHistory.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/web3@1.8.2/dist/web3.min.js"></script>
+
+  </body>
+</html>
+
+
+
+
